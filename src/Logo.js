@@ -16,3 +16,6 @@ export const Logo = props => {
 
   return <Image animation={animation} src={logo} {...props} />;
 };
+
+
+//add redux
