@@ -9,9 +9,15 @@ const FortniteAccordion = () => {
     <>
       <Flex direction="column">
         <Flex align="center" alignContent="center">
-          <Text fontSize="lg" fontWeight={clicked === true ? 'bold' : null}>
-            Fortnite
+          <Text
+            fontSize="lg"
+            textDecoration={clicked === true ? 'underline' : null}
+            textDecorationThickness={clicked === true ? 3 : null}
+            _hover={{ textDecoration: 'underline', textDecorationThickness: 3 }}
+          >
+            FORTNITE
           </Text>
+
           <Text
             as={clicked === false ? MdArrowDropDown : MdArrowDropUp}
             fontSize="xl"

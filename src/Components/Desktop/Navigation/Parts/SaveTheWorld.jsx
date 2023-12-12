@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, Text, Center, Divider } from '@chakra-ui/react';
+import { MdChevronRight, MdChevronLeft } from 'react-icons/md';
 
 const SaveTheWorld = () => {
   const [stw, setStw] = useState(false);
@@ -17,7 +18,7 @@ const SaveTheWorld = () => {
     }
   };
   return (
-    <>
+    <Flex fontSize="lg" mt={2}>
       <Flex gap="2">
         <Flex>
           <Text
@@ -25,85 +26,101 @@ const SaveTheWorld = () => {
               stwMasterSwitch();
             }}
           >
-            <Text
-              onClick={() => {
-                setStw(!stw);
-              }}
-              fontWeight={stw === false ? null : 'bold'}
-            >
-              Save the World
-            </Text>
+            <Flex>
+              <Text
+                onClick={() => {
+                  setStw(!stw);
+                }}
+                textDecoration={stw === false ? null : 'underline'}
+              >
+                Save the World
+              </Text>
+            </Flex>
           </Text>
         </Flex>
         <Flex gap="2">
           {stw === true ? (
-            <Flex direction="column">
-              <Text
-                onClick={() => {
-                  setStwLoad(!stwLoad);
-                  setStwTrap(false);
-                  setStwUpdates(false);
-                }}
-                fontWeight={
-                  stwLoad === true && stwTrap === false ? 'bold' : null
-                }
-              >
-                Loadouts
-              </Text>
-              <Text
-                onClick={() => {
-                  setStwTrap(!stwTrap);
-                  setStwLoad(false);
-                  setStwUpdates(false);
-                }}
-                fontWeight={
-                  stwTrap === true && stwLoad === false ? 'bold' : null
-                }
-              >
-                Trapping
-              </Text>
-              <Text
-                onClick={() => {
-                  setStwUpdates(!stwUpdates);
-                  setStwLoad(false);
-                  setStwTrap(false);
-                }}
-              >
-                Updates
-              </Text>
+            <Flex direction="column" width="100px">
+              <Flex justify="space-between" align="center">
+                <Text
+                  onClick={() => {
+                    setStwLoad(!stwLoad);
+                    setStwTrap(false);
+                    setStwUpdates(false);
+                  }}
+                  textDecoration={
+                    stwLoad === true && stwTrap === false ? 'underline' : null
+                  }
+                >
+                  Loadouts
+                </Text>
+                <Text as={MdChevronRight} mt="1" />
+              </Flex>
+              <Flex justify="space-between" align="center">
+                <Text
+                  onClick={() => {
+                    setStwTrap(!stwTrap);
+                    setStwLoad(false);
+                    setStwUpdates(false);
+                  }}
+                  textDecoration={
+                    stwTrap === true && stwLoad === false ? 'underline' : null
+                  }
+                >
+                  Trapping
+                </Text>
+                <Text as={MdChevronRight} mt="1" />
+              </Flex>
+              <Flex justify="space-between" align="center">
+                <Text
+                  onClick={() => {
+                    setStwUpdates(!stwUpdates);
+                    setStwLoad(false);
+                    setStwTrap(false);
+                  }}
+                  textDecoration={
+                    stwTrap === false &&
+                    stwLoad === false &&
+                    stwUpdates === true
+                      ? 'underline'
+                      : null
+                  }
+                >
+                  Updates
+                </Text>
+                <Text as={MdChevronRight} mt="1" />
+              </Flex>
             </Flex>
           ) : null}
         </Flex>
-        {stwLoad === true && stwTrap === false && stwUpdates === false ? (
-          <Flex direction="column">
-            <Text>Base</Text>
-            <Text>Harvesting</Text>
-            <Text>Special</Text>
-          </Flex>
-        ) : null}
-        {stwTrap === true && stwLoad === false && stwUpdates === false ? (
-          <Flex direction="column">
-            <Text color="gray.50" _dark={{ color: 'gray.600' }}>
-              |
-            </Text>
-            <Text>Best Practices</Text>
-            <Text>Harvesting</Text>
-            <Text>Special</Text>
-          </Flex>
-        ) : null}
-        {stwUpdates === true && stwLoad === false && stwTrap === false ? (
-          <Flex direction="column">
-            <Text color="gray.50" _dark={{ color: 'gray.600' }}>
-              |
-            </Text>
-            <Text color="gray.50" _dark={{ color: 'gray.600' }}>
-              |
-            </Text>
-            <Text color="gray.600">Coming Soon</Text>
-          </Flex>
-        ) : null}
+        <Flex>
+          {stw === false ? null : (
+            <Center mr="4">
+              <Divider orientation="vertical" />
+            </Center>
+          )}
+
+          {stwLoad === true && stwTrap === false && stwUpdates === false ? (
+            <Flex direction="column">
+              <Text>Base</Text>
+              <Text>Harvesting</Text>
+              <Text>Special</Text>
+            </Flex>
+          ) : null}
+          {stwTrap === true && stwLoad === false && stwUpdates === false ? (
+            <Flex direction="column">
+              <Text>Types</Text>
+              <Text>Best Practices</Text>
+            </Flex>
+          ) : null}
+          {stwUpdates === true && stwLoad === false && stwTrap === false ? (
+            <Flex direction="column">
+              <Text color="gray.600">Coming Soon</Text>
+            </Flex>
+          ) : null}
+        </Flex>
       </Flex>
-    </>
+    </Flex>
   );
 };
 
