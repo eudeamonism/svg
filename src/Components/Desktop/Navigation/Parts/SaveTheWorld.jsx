@@ -1,12 +1,15 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Flex, Text, Center, Divider } from '@chakra-ui/react';
-import { MdChevronRight, MdChevronLeft } from 'react-icons/md';
+import { MdChevronRight } from 'react-icons/md';
 
 const SaveTheWorld = () => {
   const [stw, setStw] = useState(false);
   const [stwLoad, setStwLoad] = useState(false);
   const [stwTrap, setStwTrap] = useState(false);
   const [stwUpdates, setStwUpdates] = useState(false);
+
+  const navigate = useNavigate();
 
   const stwMasterSwitch = () => {
     if (stwLoad === true || stwTrap === true || stwUpdates === true) {
@@ -32,12 +35,14 @@ const SaveTheWorld = () => {
                   setStw(!stw);
                 }}
                 textDecoration={stw === false ? null : 'underline'}
+                w="150px"
               >
                 Save the World
               </Text>
             </Flex>
           </Text>
         </Flex>
+
         <Flex gap="2">
           {stw === true ? (
             <Flex direction="column" width="100px">
@@ -93,16 +98,25 @@ const SaveTheWorld = () => {
             </Flex>
           ) : null}
         </Flex>
+
         <Flex>
-          {stw === false ? null : (
+          {(stw === true && stwLoad === true) ||
+          stwUpdates === true ||
+          stwTrap === true ? (
             <Center mr="4">
               <Divider orientation="vertical" />
             </Center>
-          )}
+          ) : null}
 
           {stwLoad === true && stwTrap === false && stwUpdates === false ? (
             <Flex direction="column">
-              <Text>Base</Text>
+              <Text
+                onClick={() => {
+                  navigate('/test');
+                }}
+              >
+                Base
+              </Text>
               <Text>Harvesting</Text>
               <Text>Special</Text>
             </Flex>

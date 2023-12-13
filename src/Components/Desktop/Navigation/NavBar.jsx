@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Flex, Text, Divider } from '@chakra-ui/react';
-import SaveTheWorld from './Parts/SaveTheWorld';
 import { ColorModeSwitcher } from '../../../ColorModeSwitcher';
+import SaveTheWorld from './Parts/SaveTheWorld';
+import Legos from './Parts/Legos';
+import BattleRoyal from './Parts/BattleRoyal';
 
 const NavBar = () => {
   const [fortnite, setFortnite] = useState(false);
@@ -187,7 +189,11 @@ const NavBar = () => {
       architecture === false &&
       baking === false &&
       philosophy === false ? (
-        <SaveTheWorld />
+        <Flex gap="2" direction="column">
+          <SaveTheWorld />
+          <Legos />
+          <BattleRoyal />
+        </Flex>
       ) : null}
       {fortnite === false &&
       writing === true &&
