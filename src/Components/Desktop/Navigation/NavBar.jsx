@@ -4,6 +4,7 @@ import { ColorModeSwitcher } from '../../../ColorModeSwitcher';
 import SaveTheWorld from './Parts/SaveTheWorld';
 import Legos from './Parts/Legos';
 import BattleRoyal from './Parts/BattleRoyal';
+import { MdImportContacts } from 'react-icons/md';
 
 const NavBar = () => {
   const [fortnite, setFortnite] = useState(false);
@@ -14,15 +15,31 @@ const NavBar = () => {
 
   return (
     <>
-      <Flex>
-        <Flex mr="5">
+      <Flex align="center">
+        <Flex mr="5" mt="1">
           <ColorModeSwitcher />
         </Flex>
-        <Flex justify="space-between" p="2" w="100%">
-          <Text>LOGO</Text>
 
-          <Text mr="10">Search</Text>
+        <Flex justify="space-between" p="2" w="100%" align="center">
+          <Flex align="center" gap="2">
+            <Text as={MdImportContacts} fontSize="x-large" />
+            <Text fontWeight="bold" fontSize="x-large">
+              Myth Scribe
+            </Text>
+          </Flex>
+
+          <Text
+            mr="10"
+            fontWeight="semibold"
+            onClick={() => {
+              alert('About Us Page');
+            }}
+          >
+            About Us
+          </Text>
         </Flex>
+
+
       </Flex>
       <Divider mb="2" />
       <Flex gap="4" w="100%" justify="space-evenly">
@@ -184,45 +201,59 @@ const NavBar = () => {
           </Text>
         </Flex>
       </Flex>
-      {fortnite === true &&
-      writing === false &&
-      architecture === false &&
-      baking === false &&
-      philosophy === false ? (
-        <Flex gap="2" direction="column">
-          <SaveTheWorld />
-          <Legos />
-          <BattleRoyal />
-        </Flex>
-      ) : null}
-      {fortnite === false &&
-      writing === true &&
-      architecture === false &&
-      baking === false &&
-      philosophy === false ? (
-        <Text>Writing Stuff</Text>
-      ) : null}
-      {fortnite === false &&
-      writing === false &&
-      architecture === true &&
-      baking === false &&
-      philosophy === false ? (
-        <Text>Architecture</Text>
-      ) : null}
-      {fortnite === false &&
-      writing === false &&
-      architecture === false &&
-      baking === true &&
-      philosophy === false ? (
-        <Text>Baking</Text>
-      ) : null}
-      {fortnite === false &&
-      writing === false &&
-      architecture === false &&
-      baking === false &&
-      philosophy === true ? (
-        <Text>Philosophy</Text>
-      ) : null}
+      <Flex ml="3">
+        {fortnite === true &&
+        writing === false &&
+        architecture === false &&
+        baking === false &&
+        philosophy === false ? (
+          <Flex gap="2" direction="column">
+            <SaveTheWorld />
+            <Legos />
+            <BattleRoyal />
+          </Flex>
+        ) : null}
+        {fortnite === false &&
+        writing === true &&
+        architecture === false &&
+        baking === false &&
+        philosophy === false ? (
+          <Flex gap="2" direction="column" fontSize="lg">
+            <Text>Essays</Text>
+            <Text>Fiction</Text>
+          </Flex>
+        ) : null}
+        {fortnite === false &&
+        writing === false &&
+        architecture === true &&
+        baking === false &&
+        philosophy === false ? (
+          <Flex gap="2" direction="column" fontSize="lg">
+            <Text>Arhitecture Theory</Text>
+            <Text>Coding Fundamentals</Text>
+          </Flex>
+        ) : null}
+        {fortnite === false &&
+        writing === false &&
+        architecture === false &&
+        baking === true &&
+        philosophy === false ? (
+          <Flex gap="2" direction="column" fontSize="lg">
+            <Text>Poolish Pizza</Text>
+            <Text>Sourdough Bread</Text>
+          </Flex>
+        ) : null}
+        {fortnite === false &&
+        writing === false &&
+        architecture === false &&
+        baking === false &&
+        philosophy === true ? (
+          <Flex gap="2" direction="column" fontSize="lg">
+            <Text>Analysis</Text>
+          </Flex>
+        ) : null}
+      </Flex>
+
       <Divider mt="2" />
     </>
   );

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { Flex, Text, Center, Divider } from '@chakra-ui/react';
 import { MdChevronRight } from 'react-icons/md';
 
@@ -21,7 +22,7 @@ const SaveTheWorld = () => {
     }
   };
   return (
-    <Flex fontSize="lg" mt={2}>
+    <Flex fontSize="lg" mt={2} cursor="pointer">
       <Flex gap="2">
         <Flex>
           <Text
@@ -59,7 +60,7 @@ const SaveTheWorld = () => {
                 >
                   Loadouts
                 </Text>
-                <Text as={MdChevronRight} mt="1" />
+                <Text as={MdChevronRight} mt="1" cursor="none" />
               </Flex>
               <Flex justify="space-between" align="center">
                 <Text
@@ -74,7 +75,7 @@ const SaveTheWorld = () => {
                 >
                   Trapping
                 </Text>
-                <Text as={MdChevronRight} mt="1" />
+                <Text as={MdChevronRight} mt="1" cursor="none" />
               </Flex>
               <Flex justify="space-between" align="center">
                 <Text
@@ -93,7 +94,7 @@ const SaveTheWorld = () => {
                 >
                   Updates
                 </Text>
-                <Text as={MdChevronRight} mt="1" />
+                <Text as={MdChevronRight} mt="1" cursor="none" />
               </Flex>
             </Flex>
           ) : null}
@@ -117,7 +118,9 @@ const SaveTheWorld = () => {
               >
                 Base
               </Text>
-              <Text>Harvesting</Text>
+              <HashLink to="/stw#loadouts" smooth>
+                Harvesting
+              </HashLink>
               <Text>Special</Text>
             </Flex>
           ) : null}

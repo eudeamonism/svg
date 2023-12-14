@@ -5,17 +5,17 @@ import { MdChevronRight } from 'react-icons/md';
 const BattleRoyal = () => {
   //Lego Switch
   const [battleRoyal, setBattleRoyal] = useState(false);
-  //challenges
-  const [challenges, setChallenges] = useState(false);
+  //quests
+  const [quests, setQuests] = useState(false);
   //News
   const [news, setNews] = useState(false);
 
   const battleRoyalMasterSwitch = () => {
-    if (challenges === true || news === true) {
-      setChallenges(false);
+    if (quests === true || news === true) {
+      setQuests(false);
       setNews(false);
       setBattleRoyal(!battleRoyal)
-    } else if (challenges === false || news === false) {
+    } else if (quests === false || news === false) {
       setBattleRoyal(!battleRoyal);
     }
   };
@@ -42,12 +42,12 @@ const BattleRoyal = () => {
             <Flex justify="space-between" align="center">
               <Text
                 onClick={() => {
-                  setChallenges(!challenges);
+                  setQuests(!quests);
                   setNews(false);
                 }}
-                textDecoration={challenges === true ? 'underline' : null}
+                textDecoration={quests === true ? 'underline' : null}
               >
-                Challenges
+                Quests
               </Text>
               <Text as={MdChevronRight} mt="1" />
             </Flex>
@@ -55,7 +55,7 @@ const BattleRoyal = () => {
             <Flex justify="space-between" align="center">
               <Text
                 onClick={() => {
-                  setChallenges(false);
+                  setQuests(false);
                   setNews(!news);
                 }}
                 textDecoration={news === true ? 'underline' : null}
@@ -68,20 +68,20 @@ const BattleRoyal = () => {
         ) : null}
       </Flex>
 
-      {(battleRoyal === true && challenges === true) || news === true ? (
+      {(battleRoyal === true && quests === true) || news === true ? (
         <Center ml="2" mr="4">
           <Divider orientation="vertical" />
         </Center>
       ) : null}
 
-      {challenges === true && news === false ? (
+      {quests === true && news === false ? (
         <Flex direction="column">
           <Text>Season TBD</Text>
           <Text color="gray.600">Coming Soon</Text>
         </Flex>
       ) : null}
 
-      {challenges === false && news === true ? (
+      {quests === false && news === true ? (
         <Flex direction="column">
           <Text>Redeem Codes</Text>
           <Text color="gray.600">Coming Soon</Text>
