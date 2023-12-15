@@ -111,17 +111,21 @@ const SaveTheWorld = () => {
 
           {stwLoad === true && stwTrap === false && stwUpdates === false ? (
             <Flex direction="column">
-              <Text
-                onClick={() => {
-                  navigate('/test');
-                }}
-              >
-                Base
-              </Text>
-              <HashLink to="/stw#loadouts" smooth>
-                Harvesting
+              <HashLink to="/stw#constructor" smooth>
+                <Text>Base</Text>
               </HashLink>
-              <Text>Special</Text>
+              <HashLink to="/stw#outlander" smooth>
+                <Text>Harvesting</Text>
+              </HashLink>
+              <HashLink to="/stw#soldier" smooth>
+                <Text>Soldier</Text>
+              </HashLink>
+              <HashLink to="/stw#ninja" smooth>
+                <Text>Melee</Text>
+              </HashLink>
+              <HashLink to="/stw#fun" smooth>
+                <Text>Fun</Text>
+              </HashLink>
             </Flex>
           ) : null}
           {stwTrap === true && stwLoad === false && stwUpdates === false ? (

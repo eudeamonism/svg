@@ -32,14 +32,13 @@ const NavBar = () => {
             mr="10"
             fontWeight="semibold"
             onClick={() => {
-              alert('About Us Page');
+              alert('Coming soon...');
             }}
+            cursor="pointer"
           >
             About Us
           </Text>
         </Flex>
-
-
       </Flex>
       <Divider mb="2" />
       <Flex gap="4" w="100%" justify="space-evenly">
@@ -57,6 +56,7 @@ const NavBar = () => {
             }
             textDecorationThickness={fortnite === true ? 3 : null}
             _hover={{ textDecoration: 'underline', textDecorationThickness: 3 }}
+            cursor="pointer"
             onClick={() => {
               setFortnite(!fortnite);
               setWriting(false);
@@ -90,6 +90,7 @@ const NavBar = () => {
                 : null
             }
             _hover={{ textDecoration: 'underline', textDecorationThickness: 3 }}
+            cursor="pointer"
             onClick={() => {
               setWriting(!writing);
               setFortnite(false);
@@ -101,7 +102,7 @@ const NavBar = () => {
             WRITING
           </Text>
         </Flex>
-        <Flex align="center">
+        {/* <Flex align="center">
           <Text
             fontSize="lg"
             textDecoration={
@@ -123,6 +124,7 @@ const NavBar = () => {
                 : null
             }
             _hover={{ textDecoration: 'underline', textDecorationThickness: 3 }}
+            cursor="pointer"
             onClick={() => {
               setWriting(false);
               setFortnite(false);
@@ -133,8 +135,8 @@ const NavBar = () => {
           >
             ARCHITECTURE
           </Text>
-        </Flex>
-        <Flex align="center">
+        </Flex> */}
+        {/* <Flex align="center">
           <Text
             fontSize="lg"
             textDecoration={
@@ -163,11 +165,12 @@ const NavBar = () => {
               setBaking(!baking);
               setPhilosophy(false);
             }}
+            cursor="pointer"
           >
             BAKING
           </Text>
-        </Flex>
-        <Flex align="center">
+        </Flex> */}
+        {/* <Flex align="center">
           <Text
             fontSize="lg"
             textDecoration={
@@ -196,10 +199,11 @@ const NavBar = () => {
               setBaking(false);
               setPhilosophy(!philosophy);
             }}
+            cursor="pointer"
           >
             PHILOSOPHY
           </Text>
-        </Flex>
+        </Flex> */}
       </Flex>
       <Flex ml="3">
         {fortnite === true &&
@@ -209,8 +213,8 @@ const NavBar = () => {
         philosophy === false ? (
           <Flex gap="2" direction="column">
             <SaveTheWorld />
-            <Legos />
-            <BattleRoyal />
+            {/* <Legos /> */}
+            {/* <BattleRoyal /> */}
           </Flex>
         ) : null}
         {fortnite === false &&
@@ -219,8 +223,7 @@ const NavBar = () => {
         baking === false &&
         philosophy === false ? (
           <Flex gap="2" direction="column" fontSize="lg">
-            <Text>Essays</Text>
-            <Text>Fiction</Text>
+            <Text color="gray.500">Coming Soon</Text>
           </Flex>
         ) : null}
         {fortnite === false &&

@@ -28,7 +28,7 @@ const Dashboard = () => {
   return (
     <Flex direction="column">
       {(isMobile && <Flex>'Mobile Mode Coming Soon: Desktop only.'</Flex>) ||
-        (isTablet && <Flex>'Tablet Mode Coming Soon: Desktop Only.'</Flex>) ||
+        (isTablet && <DDash />) ||
         (isDesktop && <DDash />)}
     </Flex>
   );
