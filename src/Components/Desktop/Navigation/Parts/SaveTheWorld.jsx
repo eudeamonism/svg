@@ -130,8 +130,13 @@ const SaveTheWorld = () => {
           ) : null}
           {stwTrap === true && stwLoad === false && stwUpdates === false ? (
             <Flex direction="column">
-              <Text>Types</Text>
-              <Text>Best Practices</Text>
+              <HashLink to="/stw/trap#stwfundamentals" smooth>
+                <Text>Fundamentals</Text>
+              </HashLink>
+              <HashLink to="/stw/trap#stwbest" smooth>
+                <Text>Best Traps</Text>
+              </HashLink>
+              
             </Flex>
           ) : null}
           {stwUpdates === true && stwLoad === false && stwTrap === false ? (
