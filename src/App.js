@@ -5,6 +5,7 @@ import Dashboard from './Components/Dashboard';
 import Test from './Components/Desktop/Screens/Test';
 import DStw from './Components/Desktop/Screens/DStw';
 import DStwTrap from './Components/Desktop/Screens/DStwTrap';
+import DDashHome from './Components/Desktop/Screens/DDashHome';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          {/* <Route path="/home" element={<DDashHome />} /> */}
           <Route path="/test" element={<Test />} />
           <Route path="/stw" element={<DStw />} />
           <Route path="/stw/trap" element={<DStwTrap />} />

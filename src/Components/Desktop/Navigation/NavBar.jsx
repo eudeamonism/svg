@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Flex, Text, Divider } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 import { ColorModeSwitcher } from '../../../ColorModeSwitcher';
 import SaveTheWorld from './Parts/SaveTheWorld';
 import Legos from './Parts/Legos';
@@ -7,6 +8,7 @@ import BattleRoyal from './Parts/BattleRoyal';
 import { MdImportContacts } from 'react-icons/md';
 
 const NavBar = () => {
+  const navigate = useNavigate();
   const [fortnite, setFortnite] = useState(false);
   const [writing, setWriting] = useState(false);
   const [baking, setBaking] = useState(false);
@@ -21,14 +23,25 @@ const NavBar = () => {
         </Flex>
 
         <Flex justify="space-between" p="2" w="100%" align="center">
-          <Flex align="center" gap="2">
+          <Flex
+            align="center"
+            gap="2"
+            onClick={() => {
+              navigate('/');
+            }}
+            cursor="pointer"
+          >
             <Text as={MdImportContacts} fontSize="x-large" />
-            <Text fontWeight="bold" fontSize="x-large">
+            <Text
+              fontWeight="bold"
+              fontSize="x-large"
+              _hover={{ textShadow: '2px 2px #a5a5a5 ' }}
+            >
               Myth Scribe
             </Text>
           </Flex>
 
-          <Text
+          {/* <Text
             mr="10"
             fontWeight="semibold"
             onClick={() => {
@@ -37,7 +50,7 @@ const NavBar = () => {
             cursor="pointer"
           >
             About Us
-          </Text>
+          </Text> */}
         </Flex>
       </Flex>
       <Divider mb="2" />

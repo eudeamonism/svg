@@ -41,11 +41,14 @@ const DStwTrap = () => {
             seasonal. See the following Excel sheet for more information.
           </Text>
         </Flex>
-
+        <Text mb="5" fontWeight="bold" fontSize="25px" mt="20px">
+          Hero & Schematic Release Dates
+        </Text>
         <iframe
           src="https://docs.google.com/spreadsheets/d/1UOCfWQxMgdrjnf3TbUu3N3Dynx8eaSTG_-ThrO6SF-M/edit#gid=0"
           width="80%"
           height="700px"
+          title='Save the World Schematic Release Dates'
         ></iframe>
         <Text mb="5" fontWeight="bold" fontSize="25px" mt="20px">
           Building your profile
