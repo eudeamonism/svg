@@ -6,6 +6,7 @@ import Test from './Components/Desktop/Screens/Test';
 import DStw from './Components/Desktop/Screens/DStw';
 import DStwTrap from './Components/Desktop/Screens/DStwTrap';
 import DDashHome from './Components/Desktop/Screens/DDashHome';
+import Cookies from './Components/Desktop/Screens/Cookies';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/test" element={<Test />} />
           <Route path="/stw" element={<DStw />} />
           <Route path="/stw/trap" element={<DStwTrap />} />
+          <Route path="/cookies" element={<Cookies />} />
         </Routes>
       </Router>
     </ChakraProvider>

@@ -20,7 +20,8 @@ const DDash = () => {
           borderWidth="1px"
           w="400px"
           h="475px"
-          borderColor="gray.700"
+          borderColor="gray.200"
+          _dark={{borderColor: 'gray.700'}}
           direction="column"
           align="center"
           p="2"

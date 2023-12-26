@@ -5,6 +5,7 @@ import { ColorModeSwitcher } from '../../../ColorModeSwitcher';
 import SaveTheWorld from './Parts/SaveTheWorld';
 import Legos from './Parts/Legos';
 import BattleRoyal from './Parts/BattleRoyal';
+import Baking from './Parts/Baking';
 import { MdImportContacts } from 'react-icons/md';
 
 const NavBar = () => {
@@ -149,7 +150,7 @@ const NavBar = () => {
             ARCHITECTURE
           </Text>
         </Flex> */}
-        {/* <Flex align="center">
+        <Flex align="center">
           <Text
             fontSize="lg"
             textDecoration={
@@ -180,9 +181,9 @@ const NavBar = () => {
             }}
             cursor="pointer"
           >
-            BAKING
+            RECIPES
           </Text>
-        </Flex> */}
+        </Flex>
         {/* <Flex align="center">
           <Text
             fontSize="lg"
@@ -255,8 +256,7 @@ const NavBar = () => {
         baking === true &&
         philosophy === false ? (
           <Flex gap="2" direction="column" fontSize="lg">
-            <Text>Poolish Pizza</Text>
-            <Text>Sourdough Bread</Text>
+            <Baking />
           </Flex>
         ) : null}
         {fortnite === false &&
