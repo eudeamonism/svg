@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Flex, Text, Spacer, useMediaQuery } from '@chakra-ui/react';
 import DDash from './Desktop/Screens/DDash';
+import MobileDash from './Mobile/Screens/MobileDash';
 
 
 const Dashboard = () => {
@@ -27,7 +28,7 @@ const Dashboard = () => {
 
   return (
     <Flex direction="column">
-      {(isMobile && <Flex>'Mobile Mode Coming Soon: Desktop only.'</Flex>) ||
+      {(isMobile && <MobileDash />) ||
         (isTablet && <DDash />) ||
         (isDesktop && <DDash />)}
     </Flex>
