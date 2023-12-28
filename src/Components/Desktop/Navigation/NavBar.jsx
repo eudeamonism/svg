@@ -23,7 +23,7 @@ const NavBar = () => {
           <ColorModeSwitcher />
         </Flex>
 
-        <Flex justify="space-between" p="2" w="100%" align="center">
+        <Flex justify={["flex-end", "space-between"]} p="2" w="100%" align="center">
           <Flex
             align="center"
             gap="2"
@@ -32,10 +32,10 @@ const NavBar = () => {
             }}
             cursor="pointer"
           >
-            <Text as={MdImportContacts} fontSize="x-large" />
+            <Text as={MdImportContacts} fontSize={['md', 'lg', 'x-large']} />
             <Text
               fontWeight="bold"
-              fontSize="x-large"
+              fontSize={['md', 'lg', 'lx-large']}
               _hover={{ textShadow: '2px 2px #a5a5a5 ' }}
             >
               Myth Scribe
@@ -58,7 +58,7 @@ const NavBar = () => {
       <Flex gap="4" w="100%" justify="space-evenly">
         <Flex align="center">
           <Text
-            fontSize="lg"
+            fontSize={['sm', 'md', 'lg']}
             textDecoration={
               fortnite === true &&
               writing === false &&
@@ -84,7 +84,7 @@ const NavBar = () => {
         </Flex>
         <Flex align="center">
           <Text
-            fontSize="lg"
+            fontSize={['sm', 'md', 'lg']}
             textDecoration={
               fortnite === false &&
               writing === true &&
@@ -152,7 +152,7 @@ const NavBar = () => {
         </Flex> */}
         <Flex align="center">
           <Text
-            fontSize="lg"
+            fontSize={['sm', 'md', 'lg']}
             textDecoration={
               fortnite === false &&
               writing === false &&
@@ -236,7 +236,7 @@ const NavBar = () => {
         architecture === false &&
         baking === false &&
         philosophy === false ? (
-          <Flex gap="2" direction="column" fontSize="lg">
+          <Flex gap="2" direction="column" fontSize={['sm', 'md', 'lg']}>
             <Text color="gray.500">Coming Soon</Text>
           </Flex>
         ) : null}
@@ -245,7 +245,7 @@ const NavBar = () => {
         architecture === true &&
         baking === false &&
         philosophy === false ? (
-          <Flex gap="2" direction="column" fontSize="lg">
+          <Flex gap="2" direction="column" fontSize={['sm', 'md', 'lg']}>
             <Text>Arhitecture Theory</Text>
             <Text>Coding Fundamentals</Text>
           </Flex>
@@ -255,7 +255,7 @@ const NavBar = () => {
         architecture === false &&
         baking === true &&
         philosophy === false ? (
-          <Flex gap="2" direction="column" fontSize="lg">
+          <Flex gap="2" direction="column" fontSize={['sm', 'md', 'lg']}>
             <Baking />
           </Flex>
         ) : null}
@@ -264,7 +264,7 @@ const NavBar = () => {
         architecture === false &&
         baking === false &&
         philosophy === true ? (
-          <Flex gap="2" direction="column" fontSize="lg">
+          <Flex gap="2" direction="column" fontSize={['sm', 'md', 'lg']}>
             <Text>Analysis</Text>
           </Flex>
         ) : null}

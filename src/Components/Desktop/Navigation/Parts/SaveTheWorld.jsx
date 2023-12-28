@@ -23,7 +23,7 @@ const SaveTheWorld = () => {
   };
   
   return (
-    <Flex fontSize="lg" mt={2} cursor="pointer">
+    <Flex fontSize={['sm', 'md', 'lg']} mt={2} cursor="pointer">
       <Flex gap="2">
         <Flex>
           <Text
@@ -37,7 +37,7 @@ const SaveTheWorld = () => {
                   setStw(!stw);
                 }}
                 textDecoration={stw === false ? null : 'underline'}
-                w="150px"
+                w={[100,150]}
               >
                 Save the World
               </Text>
@@ -47,7 +47,7 @@ const SaveTheWorld = () => {
 
         <Flex gap="2">
           {stw === true ? (
-            <Flex direction="column" width="100px">
+            <Flex direction="column" width={[75,100]}>
               <Flex justify="space-between" align="center">
                 <Text
                   onClick={() => {

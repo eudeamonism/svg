@@ -10,7 +10,7 @@ const Baking = () => {
   const navigate = useNavigate();
 
   return (
-    <Flex fontSize="lg" mt={2} cursor="pointer">
+    <Flex fontSize={['sm', 'md', 'lg']} mt={2} cursor="pointer">
       <Flex gap="2">
         <Flex>
           <Text
@@ -18,7 +18,7 @@ const Baking = () => {
               setBakingButton(!bakingButton);
             }}
             textDecoration={bakingButton === false ? null : 'underline'}
-            w="150px"
+            w={[75,150]}
           >
             Baking
           </Text>

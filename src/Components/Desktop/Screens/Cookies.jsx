@@ -30,9 +30,9 @@ const Cookies = () => {
           <Flex
             align="center"
             border="1px"
-            mt="4"
-            p="2"
-            borderRadius="5"
+            mt={[2, 3, 4]}
+            p={[1, 2, 3]}
+            borderRadius={[3, 4, 5]}
             _dark={{ borderColor: 'gray.600' }}
             borderColor="gray.300"
           >
@@ -45,54 +45,70 @@ const Cookies = () => {
               _dark={{ color: 'teal.600' }}
               align="center"
               as="u"
+              fontSize={['xs', 'xm', 'md']}
             >
               HOME
             </Text>
             <Text
+              fontSize={['xs', 'xm', 'md']}
               as={MdChevronRight}
               color="gray.400"
               _dark={{ color: 'gray.600' }}
             />
-            <Text color="gray.400" _dark={{ color: 'gray.600' }}>
+            <Text
+              color="gray.400"
+              _dark={{ color: 'gray.600' }}
+              fontSize={['xs', 'xm', 'md']}
+            >
               RECIPES
             </Text>
             <Text
+              fontSize={['xs', 'xm', 'md']}
               as={MdChevronRight}
               color="gray.400"
               _dark={{ color: 'gray.600' }}
             />
-            <Text color="gray.400" _dark={{ color: 'gray.600' }}>
+            <Text
+              color="gray.400"
+              _dark={{ color: 'gray.600' }}
+              fontSize={['xs', 'xm', 'md']}
+            >
               Baking
             </Text>
             <Text
+              fontSize={['xs', 'xm', 'md']}
               as={MdChevronRight}
               color="gray.400"
               _dark={{ color: 'gray.600' }}
             />
-            <Text color="gray.400" _dark={{ color: 'gray.600' }}>
+            <Text
+              color="gray.400"
+              _dark={{ color: 'gray.600' }}
+              fontSize={['xs', 'xm', 'md']}
+            >
               Cookies
             </Text>
           </Flex>
         </Flex>
 
-        <Flex direction="column" mt="5" align="center">
+        <Flex direction="column" mt={[2, 3, 4]} align="center">
           <Flex align="baseline">
-            <Text fontWeight="bold" fontSize="30" mr="2">
+            <Text fontWeight="bold" fontSize={[18, 24, 30]}>
               Cookie Recipes
             </Text>
           </Flex>
-          <Text as="i" fontSize="md" mt="-1" mb="1">
+          <Text as="i" fontSize={[14, 20, 26]} mt="-1" mb="1">
             Simple cookie recipes.
           </Text>
           <Flex direction="column">
             <Image
               src="/assets/cookie.png"
-              width="400px"
+              width={[300, 400]}
               alt="Cookie jar filled with cookies, illustration, peach background."
               mt="2"
             />
             <Text
-              fontSize="sm"
+              fontSize={[10, 16, 22]}
               as="i"
               color="gray.400"
               _dark={{ color: 'gray.600' }}
@@ -103,15 +119,15 @@ const Cookies = () => {
         </Flex>
 
         <Flex direction="column" align="center">
-          <Text fontWeight="bold" fontSize="x-large" mt="5" mb="2">
+          <Text fontWeight="bold" fontSize={[18, 24, 30]} mt={[2, 5]} mb="2">
             Cookie FAQ
           </Text>
-          <Flex border="2px" direction="column" w="700px">
+          <Flex border="2px" direction="column" p={[1, 3]}>
             <HashLink to="#oatmeal" smooth>
               <Text
                 /* borderBottom="1px" */
                 p="2"
-                fontSize="lg"
+                fontSize={['md', 'lg']}
                 fontWeight="semibold"
                 _hover={{ fontSize: 'x-large' }}
                 cursor="pointer"
@@ -122,18 +138,19 @@ const Cookies = () => {
           </Flex>
         </Flex>
 
-        <Divider mt="10" />
+        <Divider mt={[5, 10]} />
+
         <Text
           id="oatmeal"
-          fontSize="xx-large"
+          fontSize={['lg', 'xx-large']}
           fontWeight="semibold"
-          mt="10"
-          mb="5"
+          mt={[5, 10]}
+          mb={[2, 5]}
         >
           Oatmeal Cookie Recipe
         </Text>
-        <Flex w="600px" direction="column">
-          <Text mb="10">
+        <Flex w={[300, 600]} direction="column">
+          <Text mb={[5, 10]} fontSize={['sm', 'md']}>
             These hearty and healthy cookies have a fantastic taste, but
             remember: whole wheat flour plays a crucial role in binding them.
             Skip it, and you'll end up with a crumbly mess, more like granola
@@ -141,16 +158,16 @@ const Cookies = () => {
             disappointing outcome.
           </Text>
         </Flex>
-        <Flex justify="flex-start" w="600px" direction="column" mt="5">
-          <Text fontSize="x-large" fontWeight="bold">
+        <Flex justify="flex-start" w={[300, 600]} direction="column" mt="5">
+          <Text fontSize={['lg', 'x-large']} fontWeight="bold">
             Step One
           </Text>
-          <Text fontSize="lg" mb="5">
+          <Text fontSize={['md', 'lg']} mb="5">
             As you progress, check off your ingredients to ensure you have not
             doubled on missed out on some ingredients!
           </Text>
-          <TableContainer>
-            <Table size="lg">
+          <TableContainer >
+            <Table size={['sm', 'lg']}>
               <Thead>
                 <Tr>
                   <Th>Status</Th>
@@ -161,56 +178,56 @@ const Cookies = () => {
               <Tbody>
                 <Tr>
                   <Td>
-                    <Checkbox size="lg" colorScheme={'green'} />
+                    <Checkbox size={['md', 'lg']} colorScheme={'green'} />
                   </Td>
                   <Td>Oatmeal</Td>
                   <Td>Two Cups</Td>
                 </Tr>
                 <Tr>
                   <Td>
-                    <Checkbox size="lg" colorScheme="green" />
+                    <Checkbox size={['md', 'lg']} colorScheme="green" />
                   </Td>
                   <Td>Roasted Almonds</Td>
                   <Td>One Cup</Td>
                 </Tr>
                 <Tr>
                   <Td>
-                    <Checkbox size="lg" colorScheme="green" />
+                    <Checkbox size={['md', 'lg']} colorScheme="green" />
                   </Td>
                   <Td>Sugar</Td>
                   <Td>Three-quarters of a cup</Td>
                 </Tr>
                 <Tr>
                   <Td>
-                    <Checkbox size="lg" colorScheme="green" />
+                    <Checkbox size={['md', 'lg']} colorScheme="green" />
                   </Td>
                   <Td>Oil</Td>
                   <Td>Half of a cup</Td>
                 </Tr>
                 <Tr>
                   <Td>
-                    <Checkbox size="lg" colorScheme="green" />
+                    <Checkbox size={['md', 'lg']} colorScheme="green" />
                   </Td>
                   <Td>Salt</Td>
                   <Td>Half a teaspoon</Td>
                 </Tr>
                 <Tr>
                   <Td>
-                    <Checkbox size="lg" colorScheme="green" />
+                    <Checkbox size={['md', 'lg']} colorScheme="green" />
                   </Td>
                   <Td>Raisins</Td>
                   <Td>One Cup</Td>
                 </Tr>
                 <Tr>
                   <Td>
-                    <Checkbox size="lg" colorScheme="green" />
+                    <Checkbox size={['md', 'lg']} colorScheme="green" />
                   </Td>
                   <Td>Egg Whites</Td>
                   <Td>Three</Td>
                 </Tr>
                 <Tr>
                   <Td>
-                    <Checkbox size="lg" colorScheme="green" />
+                    <Checkbox size={['md', 'lg']} colorScheme="green" />
                   </Td>
                   <Td>Whole Wheat Flour</Td>
                   <Td>around half of a cup</Td>
@@ -218,40 +235,40 @@ const Cookies = () => {
               </Tbody>
             </Table>
           </TableContainer>
-          <Text fontSize="x-large" fontWeight="bold" mt="10">
+          <Text fontSize={['lg', 'x-large']} fontWeight="bold" mt="10">
             Step Two
           </Text>
-          <Text fontSize="lg" mb="5">
+          <Text fontSize={['md', 'lg']} mb="5">
             In a bowl, dump oatmeal, roasted almonds, sugar, whole wheat flour,
             and salt. Mix them well.
           </Text>
-          <Text fontSize="x-large" fontWeight="bold" mt="10">
+          <Text fontSize={['lg', 'x-large']} fontWeight="bold" mt="10">
             Step Three
           </Text>
-          <Text fontSize="lg" mb="5">
+          <Text fontSize={['md', 'lg']} mb="5">
             In another bowl, whisk the egg whites until they are foamy, somewhat
             stiff.
           </Text>
-          <Text fontSize="x-large" fontWeight="bold" mt="10">
+          <Text fontSize={['lg', 'x-large']} fontWeight="bold" mt="10">
             Step Four
           </Text>
-          <Text fontSize="lg" mb="5">
+          <Text fontSize={['md', 'lg']} mb="5">
             We are going to mix things in stages, to the dry ingredients. Start
             by mixing in the egg whites, then the oil, and finally the raisins.
           </Text>
-          <Text fontSize="x-large" fontWeight="bold" mt="10">
+          <Text fontSize={['lg', 'x-large']} fontWeight="bold" mt="10">
             Step Five
           </Text>
-          <Text fontSize="lg" mb="5">
+          <Text fontSize={['md', 'lg']} mb="5">
             Shape the batter into a disc the size of a cup with the thickness of
             an index finger. Place these discs on a cookie sheet that is lined
             with parchment paper, allowing two fingers distance around each
             cookie.
           </Text>
-          <Text fontSize="x-large" fontWeight="bold" mt="10">
+          <Text fontSize={['lg', 'x-large']} fontWeight="bold" mt="10">
             Step Six
           </Text>
-          <Text fontSize="lg" mb="5">
+          <Text fontSize={['md', 'lg']} mb="5">
             BAKE these cookies at 350 degrees Farenheit for around 15 - 25
             minutes! You may need more or less, and you'll know they are ready
             when there is browning at the edges of the cookies.
