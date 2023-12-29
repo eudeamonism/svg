@@ -9,6 +9,7 @@ import {
   Stack,
   CardBody,
   CardFooter,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import { MdChevronRight } from 'react-icons/md';
 
@@ -20,6 +21,7 @@ import NavBar from '../Navigation/NavBar';
 
 const DStwTrap = () => {
   const navigate = useNavigate();
+  const [isLargerThan600] = useMediaQuery('(width > 600px)');
   return (
     <>
       <NavBar />
@@ -105,12 +107,22 @@ const DStwTrap = () => {
         <Text mb={[2, 5]} fontWeight="bold" fontSize={[20, 25]} mt="20px">
           Hero & Schematic Release Dates
         </Text>
-        <iframe
-          src="https://docs.google.com/spreadsheets/d/1UOCfWQxMgdrjnf3TbUu3N3Dynx8eaSTG_-ThrO6SF-M/edit#gid=0"
-          width="80%"
-          height="700px"
-          title="Save the World Schematic Release Dates"
-        />
+        {isLargerThan600 ? (
+          <iframe
+            src="https://docs.google.com/spreadsheets/d/1UOCfWQxMgdrjnf3TbUu3N3Dynx8eaSTG_-ThrO6SF-M/edit#gid=0"
+            width="80%"
+            height="700px"
+            title="Save the World Schematic Release Dates"
+          />
+        ) : (
+          <iframe
+            src="https://docs.google.com/spreadsheets/d/1UOCfWQxMgdrjnf3TbUu3N3Dynx8eaSTG_-ThrO6SF-M/edit#gid=0"
+            width="100%"
+            height="600px"
+            title="Save the World Schematic Release Dates"
+          />
+        )}
+
         <Text mb={[2, 5]} fontWeight="bold" fontSize={[20, 25]} mt="20px">
           Building your profile
         </Text>
@@ -210,7 +222,7 @@ const DStwTrap = () => {
 
         <Flex direction="column" gap="6" mt="40px" mb="25px">
           <Flex
-            width={[375,800]}
+            width={[342, 800]}
             gap="2"
             p="2"
             borderWidth="2px"
@@ -220,7 +232,8 @@ const DStwTrap = () => {
           >
             <Image
               src="https://www.bing.com/th?id=OIP.26_fK2YxFhHzY8yAY5DmhQAAAA&w=172&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-              width={[150,250]}
+              width={[150, 250]}
+              height={[150, 250]}
             />
             <Flex direction="column">
               <Text fontSize={['sm', 'lg']} fontWeight="semibold">
@@ -236,7 +249,7 @@ const DStwTrap = () => {
             </Flex>
           </Flex>
           <Flex
-            width={[375,800]}
+            width={[342, 800]}
             gap="2"
             p="2"
             borderWidth="2px"
@@ -246,7 +259,8 @@ const DStwTrap = () => {
           >
             <Image
               src="https://th.bing.com/th/id/OIP.nqGv1HCpL6cw0x5UPTtBhQHaHa?rs=1&pid=ImgDetMain"
-              width={[150,250]}
+              width={[150, 250]}
+              height={[150, 250]}
             />
             <Flex direction="column">
               <Text fontSize={['sm', 'lg']} fontWeight="semibold">
@@ -261,7 +275,7 @@ const DStwTrap = () => {
             </Flex>
           </Flex>
           <Flex
-            width={[375,800]}
+            width={[342, 800]}
             gap="2"
             p="2"
             borderWidth="2px"
@@ -271,7 +285,8 @@ const DStwTrap = () => {
           >
             <Image
               src="https://th.bing.com/th/id/OIP.2E-s_C3MFpYnbiJnnT8PmAHaHa?rs=1&pid=ImgDetMain"
-              width={[150,250]}
+              width={[150, 250]}
+              height={[150, 250]}
             />
             <Flex direction="column">
               <Text fontSize={['sm', 'lg']} fontWeight="semibold">
@@ -286,7 +301,7 @@ const DStwTrap = () => {
             </Flex>
           </Flex>
           <Flex
-            width={[375,800]}
+            width={[342, 800]}
             gap="2"
             p="2"
             borderWidth="2px"
@@ -296,7 +311,8 @@ const DStwTrap = () => {
           >
             <Image
               src="https://th.bing.com/th/id/OIP.6w9_UtqeiGiXXEoRphQqCQAAAA?w=177&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-              width={[150,250]}
+              width={[150, 250]}
+              height={[150, 250]}
             />
             <Flex direction="column">
               <Text fontSize={['sm', 'lg']} fontWeight="semibold">
@@ -308,7 +324,7 @@ const DStwTrap = () => {
             </Flex>
           </Flex>
           <Flex
-            width={[375,800]}
+            width={[342, 800]}
             gap="2"
             p="2"
             borderWidth="2px"
@@ -318,7 +334,8 @@ const DStwTrap = () => {
           >
             <Image
               src="https://th.bing.com/th/id/OIP.G7r4VXn2IImFMX4k5SbEKwHaHa?rs=1&pid=ImgDetMain"
-              width={[150,250]}
+              width={[150, 250]}
+              height={[150, 250]}
             />
             <Flex direction="column">
               <Text fontSize={['sm', 'lg']} fontWeight="semibold">

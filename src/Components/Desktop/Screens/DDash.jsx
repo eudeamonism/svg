@@ -30,7 +30,7 @@ const DDash = () => {
             p="2"
             backgroundColor="green.100"
             _dark={{ backgroundColor: 'green.500' }}
-            w={['80px', '90px', '100px']}
+            w="120px"
             borderRadius="10px"
             onClick={onToggle}
             justify="center"

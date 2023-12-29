@@ -336,7 +336,7 @@ const DStw = () => {
           </Flex>
         </Flex>
 
-        <Text pl="10" fontSize={['sm', 'lg']} mt={[2, 5]}>
+        <Text pl={[5, 10]} fontSize={['sm', 'lg']} mt={[2, 5]}>
           Tip: Have your BASE's range low. This increases the overal health of
           your walls. This is the difference of having Smashers or Sploders
           destory your walls or not.
@@ -395,16 +395,16 @@ const DStw = () => {
             loadouts, harvesting quicker!
           </Text>
         </Flex>
-        <Flex w={[350, 1200]} overflow="auto" overflowX="auto">
+        <Flex w={[350, 1200]} overflow="auto" overflowX="auto" mb={[2, 5]} mt={[2, 5]}>
           <Flex
             direction="column"
-            border="2px"
-            p="4"
+            border={['1px', '2px']}
+            p={[2, 4]}
             borderRadius="25"
             w="1200px"
-            ml="10"
+            ml={[5, 10]}
           >
-            <Flex gap="4" fontSize={['sm', 'lg']} align="center" mb="3">
+            <Flex gap={[2, 4]} fontSize={['sm', 'lg']} align="center" mb="3">
               <Text fontWeight="semibold">Blast from the Past</Text>
               <Text fontSize={['x-small', 'sm']}>
                 Shields are gone but your health increases by two-hundred
@@ -415,10 +415,10 @@ const DStw = () => {
             <Flex gap="5">
               <Flex
                 direction="column"
-                width="170px"
+                width={[100, 170]}
                 align="center"
                 gap="1"
-                mr="20"
+                mr={[10, 20]}
               >
                 <Text fontSize={['sm', 'lg']} fontWeight="semibold">
                   Commander
@@ -428,7 +428,7 @@ const DStw = () => {
                 </Text>
                 <Image
                   src="/assets/FossilSouthie.webp"
-                  boxSize="100px"
+                  boxSize={[75, 100]}
                   borderRadius="full"
                   bg="orange"
                 />
@@ -445,7 +445,7 @@ const DStw = () => {
                 </Text>
                 <Image
                   src="/assets/PreHistoricIzza.webp"
-                  boxSize="100px"
+                  boxSize={[75, 100]}
                   borderRadius="full"
                   bg="orange"
                 />
@@ -460,7 +460,7 @@ const DStw = () => {
                 </Text>
                 <Image
                   src="/assets/RexJonesy.webp"
-                  boxSize="100px"
+                  boxSize={[75, 100]}
                   borderRadius="full"
                   bg="orange"
                 />
@@ -477,7 +477,7 @@ const DStw = () => {
                 </Text>
                 <Image
                   src="/assets/Clip.webp"
-                  boxSize="100px"
+                  boxSize={[75, 100]}
                   borderRadius="full"
                   bg="orange"
                 />
@@ -494,7 +494,7 @@ const DStw = () => {
                 </Text>
                 <Image
                   src="/assets/Jess.webp"
-                  boxSize="100px"
+                  boxSize={[75, 100]}
                   borderRadius="full"
                   bg="orange"
                 />
@@ -511,7 +511,7 @@ const DStw = () => {
                 </Text>
                 <Image
                   src="/assets/Pathfinder.webp"
-                  boxSize="100px"
+                  boxSize={[75, 100]}
                   borderRadius="full"
                   bg="orange"
                 />
@@ -523,7 +523,7 @@ const DStw = () => {
           </Flex>
         </Flex>
 
-        <Text pl="10" fontSize={['sm', 'lg']} mt="5">
+        <Text pl={[5, 10]} fontSize={['sm', 'lg']}>
           Tip: Consider using Cassie "Clip" Lipman as commander if your aim is
           to get more rarer items like quartz. You will be guaranteed double
           materials every time you antimaterial charge, but you must wait a lot
@@ -558,7 +558,7 @@ const DStw = () => {
               This is most powerful yet reload times are longer.
             </Text>
             <TableContainer>
-              <Table variant="simple" size="sm">
+              <Table variant="striped" colorScheme='orange' size="sm">
                 <TableCaption>
                   Team Perk: Happy Holidays (reduces cooldowns)
                 </TableCaption>
@@ -614,7 +614,7 @@ const DStw = () => {
             </Text>
             <Text mb={[2, 5]}>Powerful alternative to miniguns.</Text>
             <TableContainer>
-              <Table variant="simple" size="sm">
+              <Table variant="striped" colorScheme='orange' size="sm">
                 <TableCaption>
                   Team Perk: Happy Holidays (reduces cooldowns)
                 </TableCaption>
@@ -661,14 +661,14 @@ const DStw = () => {
               Carbide in the lead and Raven in support.
             </Text>
           </Flex>
-          <Text pl="10" fontSize={['sm', 'lg']} mt="5">
+          <Text pl={[5, 10]} fontSize={['sm', 'lg']}>
             Tip: Bouncy Lasers+ is great for Dungeons, while the rest of these
             loadouts is great for missions like Encampments and Eliminate and
             Collect.
           </Text>
         </Flex>
       </Flex>
-      <Divider mt="100" />
+      <Divider mt={[10, 20]} />
 
       <Flex direction="column" justify="center">
         <Flex direction="column" px={[5, 10]} id="loadouts">
@@ -693,10 +693,10 @@ const DStw = () => {
             Paleo Luna Build
           </Text>
           <Text mb={[2, 5]}>
-            This is most powerful yet reload times are longer.
+            This is most powerful melee damaging loadout overall.
           </Text>
           <TableContainer>
-            <Table variant="simple" size="sm">
+            <Table variant="striped" colorScheme='orange' size="sm">
               <TableCaption>
                 Team Perk: Blast from the Past (No shields, but 200% health)
               </TableCaption>
@@ -732,12 +732,12 @@ const DStw = () => {
               </Tbody>
             </Table>
           </TableContainer>
+          <Text fontSize={['sm', 'lg']}>
+            Tip: Use sword melees with double attack speed perks!
+          </Text>
         </Flex>
-        <Text pl="10" fontSize={['sm', 'lg']} mt="5">
-          Tip: Use sword melees with double attack speed perks!
-        </Text>
       </Flex>
-      <Divider mt="100" />
+      <Divider mt={[10, 20]} />
       <Flex direction="column" justify="center">
         <Flex direction="column" px={[5, 10]} id="loadouts">
           <Text
@@ -768,7 +768,7 @@ const DStw = () => {
             JoneSee Bot, Redline Ramirez, and Rabbit Raider Jonesy.
           </Text>
           <TableContainer>
-            <Table variant="simple" size="sm">
+            <Table variant="striped" colorScheme='orange' size="sm">
               <TableCaption>
                 Team Perk: Soaring Mantis (Tripple Jump) and requires three
                 ninjas.
@@ -821,7 +821,7 @@ const DStw = () => {
             loadout!
           </Text>
           <TableContainer>
-            <Table variant="simple" size="sm">
+            <Table variant="striped" colorScheme='orange' size="sm">
               <TableCaption>Team Perk: Happy Holidays</TableCaption>
               <Thead>
                 <Tr>
@@ -873,7 +873,7 @@ const DStw = () => {
           </TableContainer>
         </Flex>
       </Flex>
-      <Divider mt="100" mb="50" />
+      <Divider mt={[10, 20]} mb="50" />
     </>
   );
 };
