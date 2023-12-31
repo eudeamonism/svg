@@ -25,7 +25,7 @@ const DDash = () => {
           align="center"
           p={[2, 4]}
         >
-          <Image src="/assets/goats.png" boxSize={[80, 250, 450]} />
+          <Image src="/assets/Eude.svg" boxSize={[80, 250, 450]} />
           <Flex
             p="2"
             backgroundColor="green.100"
